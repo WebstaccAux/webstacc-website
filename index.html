@@ -15,7 +15,8 @@
       href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Syne:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260714-preloader-readable" />
+    <link rel="preload" as="image" href="assets/webstacc-logo-original.webp" fetchpriority="high" />
+    <link rel="stylesheet" href="styles.css?v=20260802-privacy-logo" />
     <script src="script.js?v=20260714-preloader-readable" defer></script>
     <noscript>
       <style>
@@ -38,8 +39,15 @@
       <div class="preloader-orb preloader-orb-two" aria-hidden="true"></div>
       <div class="preloader-inner">
         <div class="preloader-mark">
-          <span>WEB</span>
-          <span>STACC</span>
+          <img
+            class="preloader-brand-logo"
+            src="assets/webstacc-logo-original.webp"
+            alt="Webstacc — Christian Geier"
+            width="1222"
+            height="492"
+            fetchpriority="high"
+            decoding="async"
+          />
         </div>
         <div class="preloader-marketing" aria-hidden="true">
           <div class="preloader-logo-orbit">

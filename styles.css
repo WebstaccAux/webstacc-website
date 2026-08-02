@@ -184,11 +184,22 @@ body.intro-done .site-preloader {
   position: absolute;
   top: clamp(1rem, 4vw, 2rem);
   left: clamp(0.5rem, 3vw, 1.8rem);
-  display: grid;
-  gap: 0.2rem;
+  display: block;
+  width: clamp(8rem, 16vw, 14rem);
   font: 600 clamp(0.82rem, 1.4vw, 1.2rem)/0.9 var(--display);
   letter-spacing: -0.07em;
   text-transform: uppercase;
+}
+
+.preloader-brand-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter:
+    drop-shadow(0 0 18px rgba(0, 255, 0, 0.32))
+    drop-shadow(0 16px 34px rgba(0, 0, 0, 0.55));
+  transform: translateZ(72px);
+  animation: preloader-logo-presence 2200ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .preloader-mark span:last-child {
@@ -6864,6 +6875,18 @@ h3,
   }
   70% {
     transform: rotateY(-10deg) rotateZ(-1deg) scale(1.01);
+  }
+}
+
+@keyframes preloader-logo-presence {
+  0% {
+    opacity: 0;
+    transform: translate3d(-0.7rem, -0.45rem, 72px) scale(0.94);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 72px) scale(1);
   }
 }
 
